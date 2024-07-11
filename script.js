@@ -40,5 +40,5 @@ function plusSlides(n) {
 
 function minusSlides() {
     clearTimeout(timer); // Clear the timer when navigating manually
-    showSlides(slideIndex -= n);
+    showSlides(slideIndex -= 1);
 }
