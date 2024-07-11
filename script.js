@@ -1,34 +1,28 @@
+let slideIndex = 0;
+showSlides();
 
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-
-let slideIndex = 1;
-showSlides(slideIndex);
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+  showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+// Optional: Pause slideshow on mouseover
+// Replace '.slideshow-container' with your actual container class
+document.querySelector('.slideshow-container').addEventListener("mouseover", () => {
+  clearTimeout();
+});
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slides[slideIndex-1].style.display = "block";  
-}
-
-
-
-
+// Optional: Resume slideshow on mouseout
+document.querySelector('.slideshow-container').addEventListener("mouseout", () => {
+  setTimeout(showSlides, 2000);
+});

@@ -271,19 +271,16 @@ footer address {
 .mySlides img {
     vertical-align: middle;
     width: 100%;
+    
 }
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+   
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
+
 
 @keyframes fade {
     from {opacity: .4} 
@@ -291,28 +288,33 @@ footer address {
 }
 
 /* Next & previous buttons */
+/* Optional: Styles for navigation buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
     margin-top: -22px;
+    padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
+  }
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-}
-
+  }
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);}
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 
     /* Stile für Standorte */
@@ -362,5 +364,7 @@ img {
     margin: 10px;
 
 }
+
+
 
 
