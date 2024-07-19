@@ -206,13 +206,37 @@ nav ul li a:hover {
 section {
     padding: 2rem;
     background-color: #fff;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
 
     justify-content: center;
     align-items: center;
    
+}
+
+.grey {
+    background-color: grey;
+}
+
+.rosa {
+    background-color: rosybrown;
+}
+
+
+.darkgrey {
+    background-color: #414141;
+}
+
+.white {
+    color: white;
+}
+
+.whitebackground {
+    background-color: white; }
+
+.darkgreyletter {
+    color:  #414141;
 }
 
 section h2 {
@@ -336,8 +360,10 @@ footer address {
 
 
     /* Stile für Standorte */
+    /* Stile für Standorte */
+
 #standorte {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 #standorte h2 {
